@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div>
+    <!-- INPUTS -->
+    <div class="inputs">
       <input
         placeholder="op1"
         type="number"
@@ -15,7 +16,11 @@
       />
       = {{ res }}
     </div>
+    <!-- / INPUTS -->
+
     <br />
+
+    <!-- OPERATOR BUTTONS -->
     <div class="buttons">
       <button
         v-for="btn in buttons"
@@ -26,12 +31,18 @@
         {{ btn }}
       </button>
     </div>
+    <!-- / OPERATOR BUTTONS -->
 
+    <!-- CHECKBOX -->
     <div class="checkbox">
       <input type="checkbox" id="checkbox" v-model="checked" />
       <label for="checkbox">{{ checkbox_text }}</label>
     </div>
+    <!-- / CHECKBOX -->
+
     <br />
+
+    <!-- NUMERIC BUTTONS -->
     <div class="buttons-numbers" v-show="checked">
       <button
         v-for="btnNum in numCollection"
@@ -64,6 +75,7 @@
         <label for="two">Focus Second Input</label>
       </div>
     </div>
+    <!-- / NUMERIC BUTTONS -->
   </div>
 </template>
 
